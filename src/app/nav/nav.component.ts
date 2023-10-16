@@ -10,7 +10,7 @@ export class NavComponent {
   model: any = {};
   loggedIn = false; 
 
-  constructor (private accountService: AccountService) {}
+  constructor (public accountService: AccountService) {}
 
   ngOnInit(): void {
     this.getCurrentUser()
@@ -32,6 +32,10 @@ export class NavComponent {
       }, 
       error: error => console.log(error)
     });
+  }
+
+  logout() {
+    this.accountService.logout();
   }
 
 }
