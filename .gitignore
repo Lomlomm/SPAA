@@ -8,6 +8,9 @@
 
 # Node
 /node_modules
+/node_modules copy
+
+
 npm-debug.log
 yarn-error.log
 
