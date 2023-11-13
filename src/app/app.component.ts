@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http'
 import { Component, OnInit  } from '@angular/core';
 import { AccountService } from './services/account.service';
 import { UserInterface } from './_models/userInterface';
@@ -11,21 +10,13 @@ import { UserInterface } from './_models/userInterface';
 
 export class AppComponent implements OnInit {
   title = 'Citas App';
-  users: any;
-  loggedIn = false;
 
-  constructor(private http: HttpClient, private accountService: AccountService){}
+  constructor(private accountService: AccountService){}
 
   // todo inicia aqui 
   ngOnInit(): void {
-    console.log("on init")
-    this.http.get('https://localhost:5001/api/users').subscribe({
-      next: response => this.users = response,
-      error: error => console.log(error),
-      complete: () => console.log('Request completed')
-    });
+    this.setCurrentUser();
   }
-
 
   setCurrentUser(){
     const userString = localStorage.getItem("user") //checa si hay algo en el localStorage 
@@ -36,6 +27,5 @@ export class AppComponent implements OnInit {
 
   logout(){
     this.accountService.logout();
-    this.loggedIn = false; 
   }
 }

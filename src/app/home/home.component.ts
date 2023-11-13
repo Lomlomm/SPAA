@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  registerMode: any; 
+  registerMode: boolean = false; 
   users: any; 
 
   constructor(private http: HttpClient){
@@ -20,7 +20,7 @@ export class HomeComponent {
   }
 
   registerToggle(): void {
-    
+    this.registerMode = !this.registerMode;
   }
 
   getUsers(){

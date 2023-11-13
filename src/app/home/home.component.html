@@ -1,8 +1,17 @@
 <div class="container mt-5">
-    <div>
-        <div>
+    <div style="text-align: center;" *ngIf="!registerMode">
+        <h1>Encuentra a tu pareja perfecta</h1>
+        <p>Registrate para ver a tus potenciales parejas</p>
+        <div class="text-center"> 
+            <button class="btn btn-primary btn-lg me-2" (click)="registerToggle()">Registrarme</button>
+            <button class="btn btn-info  btn-lg">Conocer más</button>
+
+        </div>
+    </div>
+    <div class="container" *ngIf="registerMode">
+        <div class="row justify-content-center">
             <div class="col-4">
-                <app-register [usersFromHomeComponent]="users" 
+                <app-register
                 (cancelRegister)="cancelRegisterMode($event)">
 
                 </app-register>
