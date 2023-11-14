@@ -1,1 +1,25 @@
-<p>member-detail works!</p>
+<div class="row" *ngIf="member">
+    <div class="col-4"></div>
+    <div class="col-8">
+        <tabset class="member-tabset">
+            <tab heading="Acerca de {{member.knownAs}}">
+                <h4>Descripcion</h4>
+                <p>{{member.introduction}}</p>
+                <h4>Buscando</h4>
+                <p>{{member.lookingFor}}</p>
+            </tab>
+            <tab heading="Intereses">
+                <h4>Intereses</h4>
+                <p>{{member.interests}}</p>
+            </tab>
+            <tab heading="Fotografías">
+                <h4>Fotografías</h4>
+                <p>Las fotos irán aquí!</p>
+            </tab>
+            <tab heading="Mensajes">
+                <h4>Mensajes</h4>
+                <p>Los mensajes irán aquí!</p>
+            </tab>
+        </tabset>
+    </div>
+</div>
