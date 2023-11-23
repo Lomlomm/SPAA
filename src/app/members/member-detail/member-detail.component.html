@@ -1,7 +1,7 @@
 <div class="row" *ngIf="member">
     <div class="col-4">
         <div class="card">
-        <img src="{{member.photoUrl || '.assets/user.jpg'}}" alt="{{member.KnownAs}}" class="card-img-top img-thumbnail">
+        <img src="{{member.photoUrl || './assets/user.jpg'}}" alt="{{member.KnownAs}}" class="card-img-top img-thumbnail">
         <div class="card-body">
             <div>
                 <strong>Ubicacion:</strong>
@@ -41,9 +41,16 @@
                 <h4>Intereses</h4>
                 <p>{{member.Interests}}</p>
             </tab>
-            <tab heading="Fotografías">
-                <h4>Fotografías</h4>
-                <p>Las fotos irán aquí!</p>
+            <tab heading="Fotografías" #photoTab="tab">
+
+                    <gallery
+                        thumbPosition="left"
+                        *ngIf="photoTab.active"
+                        [items]="images"
+                        class="gallery"
+                    >
+
+                    </gallery>
             </tab>
             <tab heading="Mensajes">
                 <h4>Mensajes</h4>

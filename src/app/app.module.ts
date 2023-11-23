@@ -30,7 +30,6 @@ import { JwtInterceptor } from './_interceptors/jwt.interceptor';
     ListsComponent,
     MessagesComponent,
     MemberListComponent,
-    MemberDetailComponent,
     TestErrorComponent,
     ServerErrorComponent,
     NotFoundComponent,
