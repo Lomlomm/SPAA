@@ -69,7 +69,7 @@
         },
         "serve": {
           "options": {
-            "ssl": true, 
+            "ssl": false, 
             "sslCert": "./ssl/example.com+5.pem", 
             "sslKey": "./ssl/example.com+5-key.pem"
           },

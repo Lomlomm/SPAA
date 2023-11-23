@@ -10,7 +10,7 @@ import { error } from 'node_modules copy/log-symbols';
 })
 export class TestErrorComponent implements OnInit {
   
-  baseUrl = "https://localhost:5001/api/";
+  baseUrl = "http://localhost:5001/api/";
   validationErrors: string[] = [];
 
   constructor(private http: HttpClient) {}
