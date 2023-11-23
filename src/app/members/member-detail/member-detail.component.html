@@ -1,11 +1,11 @@
 <div class="row" *ngIf="member">
     <div class="col-4">
         <div class="card">
-        <img src="{{member.photoUrl || './assets/user.jpg'}}" alt="{{member.KnownAs}}" class="card-img-top img-thumbnail">
+        <img src="{{member.photoUrl || './assets/user.jpg'}}" alt="{{member.knownAs}}" class="card-img-top img-thumbnail">
         <div class="card-body">
             <div>
                 <strong>Ubicacion:</strong>
-                <p>{{member.City}}, {{member.Country}}</p>
+                <p>{{member.city}}, {{member.country}}</p>
             </div>
             <div>
                 <strong>Edad:</strong>
@@ -13,11 +13,11 @@
             </div>
             <div>
                 <strong>Ultima Conexion:</strong>
-                <p>{{member.LastActive}}</p>
+                <p>{{member.lastActive}}</p>
             </div>
             <div>
                 <strong>Usuario Desde:</strong>
-                <p>{{member.Created}}</p>
+                <p>{{member.created}}</p>
             </div>
         </div>
     </div>
@@ -31,15 +31,15 @@
     </div>
     <div class="col-8">
         <tabset class="member-tabset">
-            <tab heading="Acerca de {{member.KnownAs}}">
+            <tab heading="Acerca de {{member.knownAs}}">
                 <h4>Descripcion</h4>
-                <p>{{member.Introduction}}</p>
+                <p>{{member.introduction}}</p>
                 <h4>Buscando</h4>
-                <p>{{member.LookingFor}}</p>
+                <p>{{member.lookingFor}}</p>
             </tab>
             <tab heading="Intereses">
                 <h4>Intereses</h4>
-                <p>{{member.Interests}}</p>
+                <p>{{member.interests}}</p>
             </tab>
             <tab heading="Fotografías" #photoTab="tab">
 

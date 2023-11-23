@@ -2,18 +2,18 @@ import { IPhoto } from "./iphoto";
 
     export interface IMember {
     id: number; 
-    UserName: string;
+    userName: string;
     photoUrl: string;
     age: number;
-    KnownAs: string;
-    Created: Date;
-    LastActive: Date;
-    Introduction: string;
-    LookingFor: string;
-    Interests: string;
-    City: string;
-    Country: string;
-    Photos: IPhoto[];
+    knownAs: string;
+    created: Date;
+    lastActive: Date;
+    introduction: string;
+    lookingFor: string;
+    interests: string;
+    city: string;
+    country: string;
+    photos: IPhoto[];
 }
 
 
