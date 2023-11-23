@@ -11,9 +11,9 @@ export class MemberCardComponent implements OnInit {
   @Input() member: IMember | undefined
 
 
-  constructor() {}
+  constructor() {
+  }
 
   ngOnInit(): void {
-    
   }
 }

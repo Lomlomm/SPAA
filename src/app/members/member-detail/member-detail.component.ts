@@ -29,8 +29,8 @@ export class MemberDetailComponent implements OnInit{
     const username = this.route.snapshot.paramMap.get("username"); 
     if(!username) return;
     this.membersService.getMember(username).subscribe({
-      next: member =>{
-        this.member = member,
+      next: (member) => {
+        (this.member = member),
         this.getImages()
       }
     });
@@ -38,8 +38,9 @@ export class MemberDetailComponent implements OnInit{
   getImages() {
     if (!this.member) return;
     for (const photo of this.member?.photos) {
-      this.images.push(new ImageItem({ src: photo.Url, thumb: photo.Url }));
-      this.images.push(new ImageItem({ src: photo.Url, thumb: photo.Url }));
+      this.images.push(new ImageItem({ src: photo.url, thumb: photo.url }));
+      this.images.push(new ImageItem({ src: photo.url, thumb: photo.url }));
+      this.images.push(new ImageItem({ src: photo.url, thumb: photo.url }));
     }
   }
 }

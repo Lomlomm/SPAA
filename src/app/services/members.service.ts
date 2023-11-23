@@ -20,7 +20,7 @@ export class MembersService {
   }
 
   getMember(username: string){
-    return this.http.get<IMember>(this.baseUrl + "user/" + username);
+    return this.http.get<IMember>(this.baseUrl + "users/" + username);
   }
 
 }
