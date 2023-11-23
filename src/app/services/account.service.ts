@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { UserInterface } from '../_models/userInterface';
 import { BehaviorSubject, map } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class AccountService {
   private currentUserSource = new BehaviorSubject<UserInterface | null>(null);
   currentUser$ = this.currentUserSource.asObservable(); // siempre que tiene signo de peso $ es un observable 
 
-  baseUrl = "https://localhost:5001/api/" //No guardan por omision el estado de la sesion. Por eso es stateless 
+  baseUrl = environment.apiUrl //No guardan por omision el estado de la sesion. Por eso es stateless 
   // Si reefrescas la p'agina se pierde 
 
   constructor(private http:HttpClient) { }
