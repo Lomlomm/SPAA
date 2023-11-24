@@ -20,6 +20,7 @@ import { ServerErrorComponent } from './errors/server-error/server-error.compone
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { MemberCardComponent } from './members/member-card/member-card.component';
 import { JwtInterceptor } from './_interceptors/jwt.interceptor';
+import { BsDropdownModule } from 'node_modules copy/ngx-bootstrap/dropdown';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { JwtInterceptor } from './_interceptors/jwt.interceptor';
     BrowserAnimationsModule,
     FormsModule,
     SharedModule,
+    BsDropdownModule.forRoot(),
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, 
