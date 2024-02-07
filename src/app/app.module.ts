@@ -21,6 +21,7 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { MemberCardComponent } from './members/member-card/member-card.component';
 import { JwtInterceptor } from './_interceptors/jwt.interceptor';
 import { BsDropdownModule } from 'node_modules copy/ngx-bootstrap/dropdown';
+import { MemberEditComponent } from './members/member-edit/member-edit.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { BsDropdownModule } from 'node_modules copy/ngx-bootstrap/dropdown';
     TestErrorComponent,
     ServerErrorComponent,
     NotFoundComponent,
-    MemberCardComponent
+    MemberCardComponent,
+    MemberEditComponent
   ],
   imports: [
     BrowserModule,
